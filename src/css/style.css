@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+#quizForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.question-block {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.question-block:last-child {
+    border-bottom: none;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+h2 {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+.options label {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.options label:hover {
+    background-color: #dcdcdc;
+}
+.options input[type="radio"],
+.options input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle; /* Align radio/checkbox vertically */
+}
+/* Span to wrap the text content for easier selection if needed */
+.options label span {
+    vertical-align: middle;
+}
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+button:hover {
+    background-color: #0056b3;
+}
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#results {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-align: center;
+    border: 1px solid transparent; /* Base border */
+}
+.result-correct {
+     background-color: #d4edda;
+     border-color: #c3e6cb; /* Use border-color to override base */
+     color: #155724;
+}
+.result-incorrect {
+    background-color: #f8d7da;
+    border-color: #f5c6cb; /* Use border-color to override base */
+    color: #721c24;
+}
+
+/* Styling for visual feedback after evaluation */
+.correct-answer {
+     background-color: #d4edda !important; /* Use !important cautiously */
+     border: 1px solid #c3e6cb;
+}
+.incorrect-answer {
+     background-color: #f8d7da !important;
+     border: 1px solid #f5c6cb;
+     /* Optional: text-decoration: line-through; */
+}
+.user-selected {
+    /* Optional: Style user selected answers distinctly */
+    /* font-weight: bold; */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
+label.correct-answer:not(.user-selected){
+    /* Style correct answers that were NOT selected by user */
+    /* Example: Add a subtle checkmark or different border */
+     border-left: 5px solid green;
+}
+
+
+/* Style for multi-choice note */
+.multi-choice-note {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
